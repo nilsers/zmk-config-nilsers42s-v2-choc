@@ -1,0 +1,5 @@
+#include "nilsers42s_v2.dtsi"
+
+&default_transform {
+    col-offset = <6>;
+};
