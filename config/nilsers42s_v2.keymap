@@ -67,10 +67,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp EXCL  &kp AT      &kp HASH    &kp DLLR    &kp PRCNT            &kp CARET       &kp AMPS       &kp ASTRK  &kp LPAR          &kp RPAR           &kp DEL
-&trans  &none     &kp LG(F6)  &kp LS(F6)  &kp F2      &kp LG(F12)          &kp MINUS       &kp PLUS       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
-&trans  &none     &none       &none       &m_scrshot  &kp LA(LC(SPACE))    &kp UNDERSCORE  &kp BACKSLASH  &kp TILDE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans
-                              &trans      &trans      &trans               &trans          &trans         &trans
+&trans  &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT            &kp CARET       &kp AMPS       &kp ASTRK  &kp LPAR          &kp RPAR           &kp DEL
+&trans  &kp LA(F7)  &kp LG(F6)  &kp LS(F6)  &kp F2      &kp LG(F12)          &kp MINUS       &kp PLUS       &kp EQUAL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none
+&trans  &none       &none       &none       &m_scrshot  &kp LA(LC(SPACE))    &kp UNDERSCORE  &kp BACKSLASH  &kp TILDE  &kp LEFT_BRACE    &kp RIGHT_BRACE    &trans
+                                &trans      &trans      &trans               &trans          &trans         &trans
             >;
         };
 
