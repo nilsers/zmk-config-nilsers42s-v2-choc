@@ -46,13 +46,6 @@
             label = "IDEA_RENAME";
         };
 
-        idea_rename: idea_rename {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(F6)>;
-            label = "IDEA_RENAME";
-        };
-
         idea_n_iss: idea_next_issue {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
