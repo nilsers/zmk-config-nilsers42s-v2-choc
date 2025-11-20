@@ -73,6 +73,13 @@
             bindings = <&kp LA(F12)>;
             label = "IDEA_TERM";
         };
+
+        idea_renam: idea_renam {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(F6)>;
+            label = "IDEA_RENAM";
+        };
     };
 
     keymap {
@@ -116,10 +123,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&ht TILDE GRAVE  &kp EXCL  &kp AT           &kp HASH     &kp DLLR      &kp PRCNT       &kp CARET       &kp AMPS              &kp ASTRK              &kp LPAR  &kp RPAR                     &ht UNDER MINUS
-&trans           &none     &idea_structure  &idea_debug  &idea_format  &idea_search    &ht PLUS EQUAL  &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none     &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET
-&kp LSHIFT       &none     &none            &none        &idea_term    &idea_build     &none           &none                 &none                  &none     &none                        &ht PIPE BACKSLASH
-                                            &trans       &trans        &trans          &trans          &trans                &trans
+&ht TILDE GRAVE  &kp EXCL     &kp AT           &kp HASH     &kp DLLR      &kp PRCNT       &kp CARET       &kp AMPS              &kp ASTRK              &kp LPAR  &kp RPAR                     &ht UNDER MINUS
+&trans           &idea_renam  &idea_structure  &idea_debug  &idea_format  &idea_search    &ht PLUS EQUAL  &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none     &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET
+&kp LSHIFT       &none        &none            &none        &idea_term    &idea_build     &none           &none                 &none                  &none     &none                        &ht PIPE BACKSLASH
+                                               &trans       &trans        &trans          &trans          &trans                &trans
             >;
         };
 
