@@ -2,6 +2,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+// hello
+
 / {
     behaviors {
         ht: ht {
@@ -80,6 +82,32 @@
             bindings = <&kp LS(F6)>;
             label = "IDEA_RENAM";
         };
+
+        mac_lock: mac_lock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(Q))>;
+            label = "MAC_LOCK";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        bt_clear {
+            bindings = <&bt BT_CLR>;
+            key-positions = <0 12 24>;
+        };
+
+        kp_eq_plus {
+            bindings = <&kp EQUAL>;
+            key-positions = <10 11>;
+        };
+
+        kp_backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <22 23>;
+        };
     };
 
     keymap {
@@ -108,10 +136,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2      &kp N3    &kp N4      &kp N5       &kp N6                    &kp N7        &kp N8         &kp N9                     &kp N0         &trans
-&trans  &trans  &m_scrshot  &trans    &trans      &trans       &kp LEFT                  &kp DOWN      &kp UP         &kp RIGHT                  &kp PAGE_DOWN  &kp PAGE_UP
-&trans  &trans  &trans      &trans    &kp LG(F3)  &kp F3       &kp LG(LS(LEFT_BRACKET))  &kp LG(DOWN)  &kp LA(LG(B))  &kp LS(LG(RIGHT_BRACKET))  &kp LC(T)      &kp LC(LA(D))
-                            &kp LGUI  &trans      &kp SPACE    &kp RET                   &trans        &kp RALT
+&trans  &kp N1  &kp N2      &kp N3    &kp N4  &kp N5       &kp N6    &kp N7    &kp N8    &kp N9     &kp N0         &trans
+&trans  &trans  &m_scrshot  &trans    &trans  &trans       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp PAGE_DOWN  &kp PAGE_UP
+&trans  &trans  &trans      &trans    &trans  &trans       &trans    &trans    &trans    &trans     &trans         &trans
+                            &kp LGUI  &trans  &kp SPACE    &kp RET   &trans    &kp RALT
             >;
         };
 
@@ -123,16 +151,16 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&ht TILDE GRAVE  &kp EXCL     &kp AT           &kp HASH     &kp DLLR      &kp PRCNT       &kp CARET       &kp AMPS              &kp ASTRK              &kp LPAR  &kp RPAR                     &ht UNDER MINUS
-&trans           &idea_renam  &idea_structure  &idea_debug  &idea_format  &idea_search    &ht PLUS EQUAL  &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none     &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET
-&kp LSHIFT       &none        &none            &idea_n_iss  &idea_term    &idea_build     &none           &none                 &none                  &none     &none                        &ht PIPE BACKSLASH
-                                               &trans       &trans        &trans          &trans          &trans                &trans
+&ht TILDE GRAVE  &kp EXCL     &kp AT           &kp HASH     &kp DLLR      &kp PRCNT       &kp CARET      &kp AMPS              &kp ASTRK              &kp LPAR  &kp RPAR                     &ht UNDER MINUS
+&trans           &idea_renam  &idea_structure  &idea_debug  &idea_format  &idea_search    &kp LC(LA(H))  &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none     &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET
+&kp LSHIFT       &none        &ht F3 LG(F3)    &idea_n_iss  &idea_term    &idea_build     &none          &none                 &none                  &none     &none                        &trans
+                                               &trans       &trans        &trans          &trans         &trans                &trans
             >;
         };
 
         bt {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_PRV  &bt BT_NXT            &trans           &trans      &trans       &kp C_MUTE
+&mac_lock   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_PRV  &bt BT_NXT            &trans           &trans      &trans       &kp C_MUTE
 &trans      &trans        &trans        &trans        &trans        &trans          &kp C_PREV  &kp C_VOLUME_DOWN     &kp C_VOLUME_UP  &kp C_NEXT  &trans       &trans
 &sys_reset  &bootloader   &trans        &trans        &trans        &trans          &kp K_PREV  &kp LS(K_PLAY_PAUSE)  &kp K_MUTE       &kp K_NEXT  &bootloader  &sys_reset
                                         &trans        &trans        &trans          &trans      &trans                &trans
