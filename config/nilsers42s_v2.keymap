@@ -167,7 +167,7 @@
             bindings = <
 &ht TILDE GRAVE        &kp EXCL     &kp AT           &kp HASH     &kp DLLR      &kp PRCNT       &kp CARET      &kp AMPS              &kp ASTRK              &kp LPAR  &kp RPAR                     &ht UNDER MINUS
 &ht LG(F8) LS(LG(F8))  &idea_renam  &idea_structure  &idea_debug  &idea_format  &idea_search    &kp LC(LA(H))  &kp LG(LEFT_BRACKET)  &kp RG(RIGHT_BRACKET)  &none     &ht LEFT_BRACE LEFT_BRACKET  &ht RIGHT_BRACE RIGHT_BRACKET
-&kp LSHIFT             &kp LA(F7)   &ht F3 LG(F3)    &idea_n_iss  &idea_term    &idea_build     &none          &none                 &none                  &none     &none                        &trans
+&kp LSHIFT             &kp LA(F7)   &ht F3 LG(F3)    &kp LG(N5)   &idea_term    &idea_build     &none          &idea_n_iss           &none                  &none     &none                        &trans
                                                      &trans       &trans        &trans          &trans         &trans                &trans
             >;
         };
