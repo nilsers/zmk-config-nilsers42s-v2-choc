@@ -89,6 +89,20 @@
             bindings = <&kp LC(LG(Q))>;
             label = "MAC_LOCK";
         };
+
+        idea_bp_add: idea_bp {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(F8)>;
+            label = "IDEA_BP";
+        };
+
+        idea_bp_view: idea_bp_view {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LG(F8))>;
+            label = "IDEA_BP_VIEW";
+        };
     };
 
     combos {
