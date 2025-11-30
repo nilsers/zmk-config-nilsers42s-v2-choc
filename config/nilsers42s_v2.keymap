@@ -122,6 +122,11 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <22 23>;
         };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <12 13>;
+        };
     };
 
     keymap {
