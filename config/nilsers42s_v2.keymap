@@ -128,8 +128,8 @@
             key-positions = <24 25>;
         };
 
-        esc {
-            bindings = <&kp ESC>;
+        grave {
+            bindings = <&kp GRAVE>;
             key-positions = <0 1>;
         };
 
